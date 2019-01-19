@@ -2,52 +2,37 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Comming Soon</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/materialize.css" rel="stylesheet" type="text/css">
-	<link href="css/main.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<title>Maximilian Göckler</title>
+	<?php include "php/header.php" ?>
 </head>
-<body>
+<body style="overflow: hidden;">
 	<div class="pageloader"></div>
-		<div class="row" style="height: 100%;">
-			<div class="col s6 black-half half">
-				<div class="row set-right">
-					<div class="box col s6 m3 white">
-						<div class="row">
-							<p id="day" class="col s12 big black-text"></p>
-							<p class="col s12 black-text">day</p>
-						</div>
-					</div>
-					<div class="box col s6 m3 white">
-						<div class="row">
-							<p id="hour" class="col s12 big black-text"></p>
-							<p class="col s12 black-text">hour</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col s6 white-half half">
-				<div class="row set-left">
-					<div class="box col s6 m3 black">
-						<div class="row">
-							<p id="min" class="col s12 big"></p>
-							<p class="col s12">min</p>
-						</div>
-					</div>	
-					<div class="box col s6 m3 black">
-						<div class="row">
-							<p id="sec" class="col s12 big"></p>
-							<p class="col s12">sec</p>
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
+	
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Maximilian Göckler
+  </a>
+</nav>
+	
+	<header style="height: 100%;">
+	  <div class="overlay"></div>
+	  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+		<source src="assets/videos/Pexels Videos 5051.mp4" type="video/mp4">
+	  </video>
+	  <div class="container h-100">
+		<div class="d-flex h-100 text-center align-items-center">
+		  <div class="w-100 text-white">
+			<h1 class="display-3">Maximilian Göckler</h1>
+			<h2>Web Designer</h2>
+		  </div>
+		</div>
+	  </div>
+	</header>
 	
 </body>
-	<script src="js/main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script>
 			$(document).ready(function() {
 				$(".pageloader").fadeOut("slow");
