@@ -3,39 +3,54 @@
 <head>
 	<meta charset="utf-8">
 	<title>Maximilian Göckler</title>
-	<?php include "php/header.php" ?>
+	<?php require_once("favicon.php"); ?>
+	<link href="assets/css/mycss.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="overflow: hidden;">
-	<div class="pageloader"></div>
+<body>
 	
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="assets/logo/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Maximilian Göckler
-  </a>
-</nav>
-	
-	<header style="height: 100%;">
-	  <div class="overlay"></div>
-	  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-		<source src="assets/videos/Pexels Videos 5051.mp4" type="video/mp4">
-	  </video>
-	  <div class="container h-100">
-		<div class="d-flex h-100 text-center align-items-center">
-		  <div class="w-100 text-white">
-			<h1 class="display-3">Maximilian Göckler</h1>
-			<h2>Web Designer</h2>
-		  </div>
-		</div>
+<header>
+  <div class="header container">
+	 <div class="nav row">
+	 </div>
+	<div class="row justify-content-center" style="margin-top: 20vw;">
+			<h1 class="Headerue text-white text-roboto col text-center"></h1>
 	  </div>
-	</header>
+    <div class="video-container">
+      <video autoplay loop muted id="video-bg">
+
+        <source src="assets/video/bg/main-bg.mp4" type="video/mp4">
+
+      </video>
+    </div>
+  </div>
+</header>
 	
 </body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 	<script>
-			$(document).ready(function() {
-				$(".pageloader").fadeOut("slow");
-			});
-	</script>
+	
+	var typed = new Typed('.Headerue', {
+	  strings: ["Maximilian Göckler", "Webdesigner"],
+	  typeSpeed: 100,
+	  backDelay: 1000,
+	  loop: true
+	});
+	
+	var controller = new ScrollMagic.Controller();
+
+	var tween = TweenMax.to("#animate3", 1, {className: "+=fish"});
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 200, offset: -50})
+					.setTween(tween)
+					.addIndicators({name: "tween css class"}) // add indicators (requires plugin)
+					.addTo(controller);
+
+</script>
 </html>
