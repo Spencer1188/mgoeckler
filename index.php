@@ -10,7 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
 <header>
   <div class="header container">
 	 <div class="nav row">
@@ -43,14 +45,15 @@
 	  loop: true
 	});
 	
-	var controller = new ScrollMagic.Controller();
+	$( document ).ready(function() {
+		$( "span" ).siblings( ".typed-cursor" ).css( "opacity", "0" );
+	});
 
-	var tween = TweenMax.to("#animate3", 1, {className: "+=fish"});
-
-	var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 200, offset: -50})
-					.setTween(tween)
-					.addIndicators({name: "tween css class"}) // add indicators (requires plugin)
-					.addTo(controller);
-
+		
+	$(window).on('load', function() { // makes sure the whole site is loaded 
+	  $('#status').fadeOut(); // will first fade out the loading animation 
+	  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+	  $('body').delay(350).css({'overflow':'visible'});
+	})
 </script>
 </html>
